@@ -1,0 +1,245 @@
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: grey;
+    }
+
+.nav {
+    align-items: center;
+    
+}
+.nav-links {
+    margin-left: 0%;
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    list-style-type: none;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    line-height: 10vh;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+    text-align: center;
+}
+#check {
+    display: none;
+}
+.image {
+    display: none;
+}
+.logo-container {
+    text-align: center;
+}
+
+.nav-link {
+    font-size: 18 px;
+    
+    
+    
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+
+slider {
+    display: block;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    background-color: grey;
+    
+}
+
+slider > * {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    animation: slide 12s infinite;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+slide:nth-child(1) {
+    left: 0%;
+    animation-delay: -1s;
+    background-image: url(./images/slider-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide:nth-child(2) {
+    animation-delay: 2s;
+    background-image: url(./images/slider-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide:nth-child(3) {
+    left: 0%;
+    animation-delay: 5s;
+    background-image: url(./images/slider-3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide:nth-child(4) {
+    left: 0%;
+    animation-delay: 8s;
+    background-image: url(./images/slider-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide p {
+    font-family: Poppins;
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 150px;
+    color: black;
+}
+
+@keyframes slide {
+    0% { left: 100%; width: 100%;}
+    5% { left: 0%;}
+    25% { left: 0%;}
+    30% { left: -100%; width: 100%;}
+    30.001% { left: -100%; width: 0%;}
+    100% { left 100%; width: 0%;}
+}
+
+main {
+    padding: 20px;
+}
+section {
+    position: absolute;
+}
+.h1 {
+    font-family: 'Fugaz One', cursive;
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 25% 0% 0% 0%;
+    color: #005BAC
+ 
+}
+.h4 {
+    font-family: Poppins;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 1%;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 1%;
+    
+    
+}
+
+.box-shadow {
+    box-shadow: 0 1px 1px #fff;
+}
+
+.img-border {
+    border: #ebebec 4px solid;
+    border-radius: 12px;
+}
+
+.test {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    text-align: center;
+    flex-flow: row wrap;
+    padding: 20px;
+}
+.test1 {
+    flex: 1;
+    
+
+}
+.test2 {
+    flex: 1;
+    
+
+}
+.test3 {
+    flex: 1;
+    
+
+}
+.footer-content {
+    display: flex;
+    height: 20%;
+    background-color: grey;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    flex-flow: row wrap;
+}
+.footer.content-left {
+    flex: 1;
+}
+.footer-content-left h1, p { 
+    color: whitesmoke;
+    }
+.footer.content-right {
+    flex: 1;
+    }
+.separator {
+    content: "&nbsp;";
+}
+
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+        align-self: center;
+            }
+    nav {
+        
+    }
+    .nav-links {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: darkgrey;
+        top: 30%;
+        display: flex;
+        flex-direction: column;
+        left: -100%;
+        transition: all .5s;
+        text-align: center;
+        justify-content: space-between;
+        
+        
+
+    }
+    #check:checked ~ .nav-links{
+        left: 0%;
+    }
+      
+slider {
+    display: none;
+    
+}
+.image {
+    display: block;
+}
+}
+
